@@ -8,23 +8,22 @@
 		exit("Erro: {$conn->connect_error}");
 	}
 
-	//Deletar/Delete
+	//Deletar - DELETE
 	$sql = "delete from tbl_clientes where id>5 ";
 	$conn -> query($sql);
 
 
-	//Actualizar/Update
+	//Actualizar - UPDATE
 	$sql = "update tbl_clientes set nome = 'Fernando Gomes' where id='1'";
 	$conn ->query($sql);
 
 
-	//Insert/Inserir
+	//Inserir - READ 
 	$sql = "insert into tbl_clientes (nome, email, cidade, estado) values ('Ana', 'ana@gmail.com', 'Tete', 'TE')";
 	$conn -> query($sql);
 
 
-
-	//Ler
+	//Ler - CREATE
 	$sql = "select * from tbl_clientes";
 	$result = $conn -> query($sql);
 
